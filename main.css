@@ -1,0 +1,254 @@
+/*
+* CSS Reset
+*
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label,
+legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tame the box model */
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+
+/*
+* Layout & Transitions
+*
+*/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: auto;
+}
+
+.container {
+  margin: 2rem 0.8rem;
+}
+
+p {
+  margin: 0.8rem;
+}
+
+h1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem 0.8rem;
+}
+
+.thumbnail {
+  border: 1px solid #5F6D64;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  height: auto;
+  width: 100%;
+  opacity: 0.7;
+  -webkit-transition: all 300ms ease-in;
+  -o-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+
+.thumbnail img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 1;
+}
+
+h2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+
+/*
+* Typography & Color
+*
+*/
+
+body {
+  color: #5F6D64;
+  font-family: Abel, sans-serif;
+  font-size: 1em;
+  line-height: 1.7;
+}
+
+.drop-cap {
+  float: left;
+  height: 50px;
+  padding-right: 0.6rem;
+  font-family: "Vollkorn SC", serif;
+  font-size: 3.157em;
+  line-height: 1.3;
+}
+
+p {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: justify;
+}
+
+h1 {
+  font-family: "Vollkorn SC", serif;
+  font-size: 1.777em;
+  line-height: 1.3;
+  text-align: center;
+}
+
+a {
+  color: #5F6D64;
+  font-size: 1.333em;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+span {
+  color: #57968F;
+}
+
+.pink {
+  background-color: #FEF6F4;
+}
+
+.blue,
+.green {
+  background-color: #FEFFF9;
+}
+
+.pink h2 {
+  color: #81483C;
+}
+
+.blue h2 {
+  color: #3B92BC;
+}
+
+.green h2 {
+  color: #6A9077;
+}
+
+@media (min-width: 370px) {
+  span {
+    color: #5F6D64;
+  }
+
+  .call-out,
+  .drop-cap {
+    color: #57968F;
+  }
+}
+
+@media (min-width: 700px) {
+  h1{
+    font-size: 1.333em;
+  }
+
+  p,
+  .thumbnails {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1100px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  p {
+    width: 35%;
+  }
+
+  h1 {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1.777em;
+  }
+
+  section {
+    min-height: 500px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .thumbnails {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+
+  }
+
+  .thumbnail {
+    margin: 10px;
+  }
+
+  .pink h2,
+  .blue h2,
+  .green h2 {
+    color: #5F6D64;
+  }
+}
+
+@media (min-width: 1400px) {
+  p {
+    width: 25%;
+  }
+}
